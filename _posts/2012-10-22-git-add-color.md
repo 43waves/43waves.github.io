@@ -7,6 +7,6 @@ Open a terminal and run this:
 
 {% highlight bash %}
     $ git config --global color.ui auto
-{% endhighlight%}
+{% endhighlight %}
 
 You're in a colorful world now. :smile:
