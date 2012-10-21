@@ -23,13 +23,9 @@ p code {
 }
 
 .content {
-  margin: 0 15%;
-}
-
-.related {
-  padding: 0 15%;
-  color: #999;
-  margin-bottom: 3em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px;
 }
 
 .related ul {
@@ -184,13 +180,10 @@ h3 {
 }
 
 #foots {
-  margin-top: 1.25em;
+  margin-top: 3em;
   padding: 10px 15%;
   background-color: #eee;
   font-size: 14px;
-}
-
-#foots {
   color: #999;
 }
 
