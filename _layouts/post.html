@@ -2,11 +2,6 @@
 layout: layout
 ---
 
-<!-- <div id="enjoy_my_toots">
-  <p>Hey, thanks for reading.</p>
-  <p>If you dug this, you'll really dig my tweets.
-    <a href="http://twitter.com/43waves">You should follow me on Twitter</a>.
-  </p> -->
 <div class="content">
   <div id="post">
     {% include post_header.html %}
@@ -14,19 +9,7 @@ layout: layout
   </div>
 </div>
 
-<!-- <div id="related">
-  <h2>Some Recent Posts</h2>
-  <ul>
-    {% for post in site.related_posts limit:5 %}
-      <li>
-        <a href="{{ post.url }}">{{ post.title }}</a>
-        <span>
-          {{ post.date | date: "%B" }} {{ post.date | date: "%e" }}, {{ post.date | date: "%Y" }}
-        </span>
-      </li>
-    {% endfor %}
-  </ul> -->
-<div id="related">
+<div id="boastful">
   <h4>
     Readers who have tweeted about "{{ page.title }}"
     <script type="text/javascript" src="http://cdn.topsy.com/button.js"></script>
