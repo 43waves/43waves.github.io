@@ -3,10 +3,10 @@ layout: post
 title: Git: Add Color
 ---
 
-Open a console and run this:
+Open a terminal and run this:
 
-`git config --global color.ui auto`
+{% highlight bash %}
+    $ git config --global color.ui auto
+{% endhighlight%}
 
-The world is more colorful now.
-
-http://www.ralfebert.de/tutorials/git/#colors
+You're in a colorful world now. :smile:
