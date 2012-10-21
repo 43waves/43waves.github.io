@@ -10,6 +10,14 @@
     <link rel="stylesheet" type="text/css" media="screen, projection" href="/css/styles.css" />
     <!-- <link rel="stylesheet" type="text/css" href="/css/syntax.css" /> -->
 
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/javascript/jquery-boastful.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('#boastful').boastful()
+      });
+    </script>
+
     <script type="text/javascript">
 
       var _gaq = _gaq || [];
@@ -26,7 +34,7 @@
   </head>
 
   <body>
-    <div id="content">
+    <div class="content">
       <div id="header">
         <a href="/">
           <img src="http://www.gravatar.com/avatar/4090148590acdd31b5a96bb63d0c2293.png" height="48" width="48">
@@ -41,9 +49,20 @@
           <a href="http://twitter.com/43waves">twitter</a>
         </div>
       </div>
+    </div>
 
-      {{ content }}
+    {{ content }}
 
+    <div class="related">
+      <h3>All Posts</h3>
+      <p>
+        {% for post in site.posts %}
+          <a href="{{ post.url }}">{{ post.title }}</a>
+          {% unless forloop.last %}
+            &ndash;
+          {% endunless %}
+        {% endfor %}
+      </p>
     </div>
   </body>
 </html>
