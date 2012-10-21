@@ -11,7 +11,7 @@ title: "43waves"
 {% endfor %}
 
 <div class="related">
-  {% unless site.posts.size < 5 %}
+  {% unless site.posts.size <= 5 %}
     <h3>More Posts</h3>
     <p>
       {% for post in site.posts offset:5 %}
