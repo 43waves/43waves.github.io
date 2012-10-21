@@ -171,6 +171,10 @@ h3 {
   color: #93BCED;
 }
 
+#boastful .topsy_widget_data {
+  float: right;
+}
+
 /* temporary demarcate this for when I extract boastful */
 .boastful {
   display: inline;
