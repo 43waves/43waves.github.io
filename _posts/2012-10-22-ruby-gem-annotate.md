@@ -27,6 +27,6 @@ Schema information is added on top of /<project>/app/model/User.rb:
     #  remember_token  :string(255)
     #  admin           :boolean          default(FALSE)
     #
-{% endhighlight%}
+{% endhighlight %}
 
 Every time the model changed, rerun the command to update the new schema information.
