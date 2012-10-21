@@ -11,6 +11,15 @@ a:hover {
   text-decoration: none;
 }
 
+p code {
+  background-color: #F9F9F9;
+  border: 1px solid #eee;
+  font-size: 12px;
+  padding: 2px 3px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+}
+
 #content {
   margin: 0 15%;
 }
@@ -58,6 +67,7 @@ h3 {
 #header img {
   border: 0;
   -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
   float: right;
 }
 
@@ -76,7 +86,7 @@ h3 {
 }
 
 #post p {
-  line-height: 1.5em;
+  line-height: 1.6em;
 }
 
 #post .bubbles {
@@ -86,6 +96,7 @@ h3 {
   padding: 5px 5px 3px 5px;
   background-color: #F9F9F9;
   -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
   border: 1px solid #eee;
 }
 
