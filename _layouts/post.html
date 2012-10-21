@@ -7,8 +7,15 @@ layout: layout
   {{ content }}
 </div>
 
+<div id="enjoy_my_toots">
+  <p>Hey, thanks for reading.</p>
+  <p>If you dug this, you'll really dig my tweets.
+    <a href="http://twitter.com/43waves">You should follow me on Twitter</a>.
+  </p>
+</div>
+
 <div id="related">
-  <h2>Recent Posts</h2>
+  <h2>Some Recent Posts</h2>
   <ul>
     {% for post in site.related_posts limit:5 %}
       <li>
