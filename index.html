@@ -4,15 +4,7 @@ title: "43waves"
 ---
 
 <div class="content">
-  {% for page in site.posts limit:1 %}
-    <div id="post">
-      {% include post_header.html %}
-      {{ page.content }}
-    </div>
-  {% endfor %}
-
   <div class="related">
-    <h3>All Posts</h3>
     <ul>
       {% for post in site.posts %}
         <li>
