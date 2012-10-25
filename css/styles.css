@@ -26,26 +26,6 @@ p code, li code {
   margin-right: 200px;
 }
 
-.content ul {
-  font-size: .8em;
-  border-top: 2px solid #ccc;
-  border-bottom: 1px solid #ccc;
-  background-color: #eee;
-  padding: 1em 2em;
-  margin: 0 2em;
-}
-
-.content li {
-  line-height: 1.25em;
-  margin-bottom: .75em;
-  color: #222;
-  list-style-type: square;
-}
-
-.content li code {
-  border: 1px solid #ccc;
-}
-
 .related { margin-top: 10px; }
 
 .related ul {
@@ -135,6 +115,26 @@ h3 {
 
 #post {
   margin-bottom: 8em;
+}
+
+#post ul {
+  font-size: .8em;
+  border-top: 2px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  background-color: #eee;
+  padding: 1em 2em;
+  margin: 0 2em;
+}
+
+#post li {
+  line-height: 1.25em;
+  margin-bottom: .75em;
+  color: #222;
+  list-style-type: square;
+}
+
+#post li code {
+  border: 1px solid #ccc;
 }
 
 #post p {
