@@ -12,8 +12,8 @@ a:hover {
   text-decoration: none;
 }
 
-p code {
-  background-color: #F9F9F9;
+p code, li code {
+  background-color: #f9f9f9;
   border: 1px solid #eee;
   font-size: 12px;
   padding: 2px 3px;
@@ -24,6 +24,26 @@ p code {
 .content {
   margin-left: 300px;
   margin-right: 200px;
+}
+
+.content ul {
+  font-size: .8em;
+  border-top: 2px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  background-color: #eee;
+  padding: 1em 2em;
+  margin: 0 2em;
+}
+
+.content li {
+  line-height: 1.25em;
+  margin-bottom: .75em;
+  color: #222;
+  list-style-type: square;
+}
+
+.content li code {
+  border: 1px solid #ccc;
 }
 
 .related { margin-top: 10px; }
