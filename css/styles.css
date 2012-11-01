@@ -143,6 +143,11 @@ h3 {
   line-height: 1.7em;
 }
 
+#post img {
+  -webkit-border-radius: 4px;
+  -webkit-border-shadow: 0 0 10px #555;
+}
+
 #post .authoring {
   padding-left: 8px;
   font-size: 14px;
