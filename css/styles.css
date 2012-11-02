@@ -53,6 +53,14 @@ hr {
   float: right;
 }
 
+.related a {
+  text-decoration: none;
+}
+
+.related a:hover {
+  text-decoration: underline;
+}
+
 h1,h2,h3,h4 {
   color: #555;
   font-family: 'Futura';
