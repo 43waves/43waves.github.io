@@ -21,6 +21,13 @@ p code, li code {
   -moz-border-radius: 4px;
 }
 
+hr {
+  border: 0;
+  height: 1px;
+  background-color: #ccc;
+  margin: 2em 1em;
+}
+
 .content {
   margin-left: 300px;
   margin-right: 200px;
