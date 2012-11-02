@@ -8,7 +8,7 @@ jQuery(document).ready(function($){
   });
 
   $('#play').mouseover(function(){
-    $('#mousing').text("Android Apps");
+    $('#mousing').text("Apps");
   });
 
   $('#play').mouseout(function(){
