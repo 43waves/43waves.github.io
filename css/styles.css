@@ -99,7 +99,17 @@ h3 {
   margin: 10px 0 20px 0;
 }
 
-#header #startup {
+#header #xliii {
+  font-size: 23px;
+  letter-spacing: 5px;
+  color: #666;
+}
+
+#header #xliii:hover {
+  color: #000;
+}
+
+#header #waves {
   font-size: 17px;
   font-weight: bold;
   letter-spacing: 1px;
