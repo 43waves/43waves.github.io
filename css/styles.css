@@ -103,10 +103,15 @@ h3 {
 }
 
 #header .avatar {
-  border: 0;
+  margin-left: 2px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
-  -webkit-box-shadow: 0 0 4px #555;
+  -webkit-box-shadow: 0 0 15px #ccc;
+  opacity: .8;
+}
+
+#header .avatar:hover {
+  opacity: 1;
 }
 
 #header a {
