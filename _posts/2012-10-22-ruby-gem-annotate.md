@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Ruby Gem - Annotate
+permalink: /2012/10/ruby-gem-annotate
 ---
 
 Annotate adds schema information into model file.
