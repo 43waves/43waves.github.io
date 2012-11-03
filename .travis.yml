@@ -1,3 +1,6 @@
 install: gem install jekyll
+
+script: jekyll --pygments --safe
+
 notifications:
   email: false
