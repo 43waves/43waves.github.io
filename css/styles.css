@@ -29,7 +29,7 @@ hr {
 
 .content {
   margin-left: 110px;
-  width: 600px;
+  width: 650px;
   margin-bottom: 50px;
 }
 
@@ -228,12 +228,7 @@ BOASTFUL
 */
 #boastful {
   margin: 20px 15px 7em 15px;
-  color: #999;
   text-shadow: 1px 1px 0 #fff;
-}
-
-#boastful a {
-  color: #93BCED;
 }
 
 #boastful .twitter-share-button {
