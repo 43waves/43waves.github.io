@@ -7,6 +7,14 @@ jQuery(document).ready(function($){
     $('#mousing').html("&nbsp;");
   });
 
+  $('#github').mouseover(function(){
+    $('#mousing').text("GitHub");
+  });
+
+  $('#github').mouseout(function(){
+    $('#mousing').html("&nbsp;");
+  });
+
   $('#play').mouseover(function(){
     $('#mousing').text("Apps");
   });
