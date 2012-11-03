@@ -104,8 +104,8 @@ h3 {
 
 #header .avatar {
   border: 0;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
   -webkit-box-shadow: 0 0 4px #555;
 }
 
