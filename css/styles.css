@@ -1,10 +1,11 @@
 body {
   font-family: 'Myriad Pro';
   margin: 0;
+  -webkit-font-smoothing: antialiased;
 }
 
 a {
-  color: #227CE8;
+  color: #227ce8;
 }
 
 a:hover {
@@ -33,7 +34,9 @@ hr {
   margin-bottom: 50px;
 }
 
-.related { margin-top: 10px; }
+.related {
+  margin-top: 10px;
+}
 
 .related ul {
   margin: 0;
@@ -87,6 +90,7 @@ h2 {
 h3 {
   color: #777;
   font-size: 25px;
+  padding-bottom: 5px;
   margin-bottom: 10px;
 }
 
@@ -114,21 +118,14 @@ h3 {
   margin: 10px 0 20px 0;
 }
 
-#header #xliii {
-  padding-left: 1px;
-  font-size: 23px;
-  letter-spacing: 5px;
-  color: #666;
-}
-
-#header #xliii:hover {
-  color: #000;
-}
-
 #header #waves {
   font-size: 17px;
   font-weight: bold;
   letter-spacing: 1px;
+  color: #333;
+}
+
+#header #waves:hover {
   color: #000;
 }
 
@@ -168,8 +165,8 @@ h3 {
 }
 
 #post {
-  padding-bottom: 15px;
-  border-bottom: 1px solid #eee;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 #post ul {
@@ -248,6 +245,35 @@ h3 {
   font-style: normal;
 }
 
+.whoring {
+  margin: 30px 0;
+  padding: 10px 0;
+  font-family: sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.whoring p {
+  margin-top: 0;
+}
+
+.whoring img {
+  position: relative;
+  float: left;
+  margin-top: 5px;
+  margin-right: 10px;
+  margin-left: -60px;
+  border-radius: 4px;
+}
+
+.whoring .copy {
+  padding-left: 60px;
+}
+
+.whoring .twitter-follow-button {
+  width: 75px !important;
+}
+
 /*
 
 HACKER NEWS MAD KARMA
@@ -263,8 +289,7 @@ BOASTFUL
 
 */
 #boastful {
-  margin: 30px 15px 7em 15px;
-  text-shadow: 1px 1px 0 #fff;
+  margin: 30px 0 7em 0;
 }
 
 #boastful .twitter-share-button {
