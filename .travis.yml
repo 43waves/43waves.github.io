@@ -1,4 +1,6 @@
-install: gem install jekyll
+before_install:
+  - gem install jekyll
+  - gem install rdiscount
 
 script: jekyll --pygments --safe
 
