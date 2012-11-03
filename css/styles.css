@@ -75,8 +75,19 @@ h1 a, h2 a, h3 a, h4 a {
 
 h1 {
   font-size: 36px;
-  margin-top: 17px;
+  margin-top: 18px;
   margin-bottom: .15em;
+}
+
+h2 {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+h3 {
+  color: #777;
+  font-size: 25px;
+  margin-bottom: 10px;
 }
 
 #header {
@@ -179,6 +190,7 @@ h1 {
 
 #post p {
   font-size: 18px;
+  margin-top: 0;
   margin-bottom: 1.2em;
   line-height: 1.7em;
 }
@@ -198,6 +210,7 @@ h1 {
 }
 
 #post .authoring {
+  margin-bottom: 17px;
   padding-left: 3px;
   font-size: 14px;
   color: #777;
