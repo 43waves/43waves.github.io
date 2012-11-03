@@ -1,7 +1,7 @@
-destination: ./_site
+# destination: ./_site
 markdown: rdiscount
 pygments: true
 permalink: /posts/:title
-auto: true
+# auto: true
 rdiscount:
   extensions: [smart]
