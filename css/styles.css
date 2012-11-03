@@ -36,6 +36,7 @@ hr {
 
 .related {
   margin-top: 10px;
+  font-family: sans-serif;
 }
 
 .related ul {
@@ -46,7 +47,7 @@ hr {
 .related li {
   font-size: 14px;
   list-style: none;
-  padding: 5px 0;
+  padding: 5px 3px;
   margin: 0;
   color: #777;
   border-bottom: 1px solid #eee;
@@ -190,7 +191,7 @@ h3 {
 }
 
 #post p {
-  font-size: 18px;
+  font-size: 16px;
   margin-top: 0;
   margin-bottom: 1.2em;
   line-height: 1.7em;
