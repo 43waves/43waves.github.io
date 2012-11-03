@@ -8,19 +8,20 @@ layout: layout
     {{ content }}
   </div>
 
-  <div id="hn">
-    <h3>Twitterize</h3>
-    <p>If you <a href="http://twitter.com/43waves">follow me on Twitter</a> you
-      will be started to discover that you have transformed into a handsome
-      loaf of bread.</p>
-  </div>
-
   {% if page.hn %}
   <div id="hn">
     <h3>Comments</h3>
     You can discuss this post on its <a href="{{ page.hn }}">Hacker News submission</a>.
   </div>
   {% endif %}
+
+
+  <div id="hn">
+    <h3>Twitterize</h3>
+    <p>If you <a href="http://twitter.com/43waves">follow me on Twitter</a> you
+      will be started to discover that you have transformed into a handsome
+      loaf of bread.</p>
+  </div>
 
   <div id="boastful">
     <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via"43waves">Tweet</a>
