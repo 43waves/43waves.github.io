@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Git - Add Color
+permalink: /2012/10/git-add-color
 ---
 
 Open a terminal and run this:
