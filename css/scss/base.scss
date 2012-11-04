@@ -44,22 +44,27 @@ a {
   .name {
     text-transform: uppercase;
     margin: 10px 0 20px 0;
-    color: $black;
-
-    &:hover {
-      color: #333;
-    }
 
     #xliii {
       padding-left: 1px;
       font-size: 23px;
       letter-spacing: 5px;
+      color: $black;
+
+      &:hover {
+        color: #333;
+      }
     }
 
     #waves {
       font-size: 17px;
       font-weight: bold;
       letter-spacing: 1px;
+      color: $black;
+
+      &:hover {
+        color: #333;
+      }
     }
   }
 
