@@ -1,8 +1,10 @@
 before_install:
   - gem update --system
   - gem --version
+  - npm install coffee-script
 
-script: jekyll --pygments --safe
+# script: jekyll --pygments --safe
+script: rake compile
 
 notifications:
   email: false
