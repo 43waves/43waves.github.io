@@ -11,7 +11,34 @@ a {
   left: 15px;
   top: 15px;
   width: 130px;
-  font-family: Helvetica, sans-serif; }
+  font-family: Helvetica, sans-serif;
+  /*  .name {
+      text-transform: uppercase;
+      margin: 10px 0 20px 0;
+      color: $black;
+  
+      #xliii {
+        padding-left: 1px;
+        font-size: 23px;
+        letter-spacing: 5px;
+        color: $black;
+  
+        &:hover {
+          color: #333;
+        }
+      }
+  
+      #waves {
+        font-size: 17px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        color: $black;
+  
+        &:hover {
+          color: #333;
+        }
+      }
+    }*/ }
   .sidebar a {
     text-decoration: none; }
   .sidebar .avatar {
@@ -28,16 +55,14 @@ a {
       padding-left: 1px;
       font-size: 23px;
       letter-spacing: 5px;
-      color: black; }
+      color: #666; }
       .sidebar .name #xliii:hover {
-        color: #333; }
+        color: black; }
     .sidebar .name #waves {
       font-size: 17px;
       font-weight: bold;
       letter-spacing: 1px;
       color: black; }
-      .sidebar .name #waves:hover {
-        color: #333; }
   .sidebar img {
     /*padding: 0 3px;*/
     border: 0; }
