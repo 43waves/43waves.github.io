@@ -2,11 +2,11 @@
 # It's JavaScript for this blog.
 #
 $(document).ready () ->
-  #$('#github').mouseover () ->
-  #  $('#mousing').text("GitHub")
+  $('#github').mouseover () ->
+    $('#mousing').text("GitHub")
 
-  #$('#github').mouseout () ->
-  #  $('#mousing').html("&nbsp;")
+  $('#github').mouseout () ->
+    $('#mousing').html("&nbsp;")
 
   $('#twitter').mouseover () ->
     $('#mousing').text("Twitter")

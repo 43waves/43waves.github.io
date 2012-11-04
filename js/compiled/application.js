@@ -2,6 +2,12 @@
 (function() {
 
   $(document).ready(function() {
+    $('#github').mouseover(function() {
+      return $('#mousing').text("GitHub");
+    });
+    $('#github').mouseout(function() {
+      return $('#mousing').html("&nbsp;");
+    });
     $('#twitter').mouseover(function() {
       return $('#mousing').text("Twitter");
     });
