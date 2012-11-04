@@ -3,28 +3,28 @@
 
   $(document).ready(function() {
     $('#github').mouseover(function() {
-      return $('#mousing').text("GitHub");
+      return $('.alt-text').text("GitHub");
     });
     $('#github').mouseout(function() {
-      return $('#mousing').html("&nbsp;");
+      return $('.alt-text').html("&nbsp;");
     });
     $('#twitter').mouseover(function() {
-      return $('#mousing').text("Twitter");
+      return $('.alt-text').text("Twitter");
     });
     $('#twitter').mouseout(function() {
-      return $('#mousing').html("&nbsp;");
+      return $('.alt-text').html("&nbsp;");
     });
     $('#play').mouseover(function() {
-      return $('#mousing').text("Apps");
+      return $('.alt-text').text("Apps");
     });
     $('#play').mouseout(function() {
-      return $('#mousing').html("&nbsp;");
+      return $('.alt-text').html("&nbsp;");
     });
     $('#rss').mouseover(function() {
-      return $('#mousing').text("RSS");
+      return $('.alt-text').text("RSS");
     });
     return $('#rss').mouseout(function() {
-      return $('#mousing').html("&nbsp;");
+      return $('.alt-text').html("&nbsp;");
     });
   });
 
