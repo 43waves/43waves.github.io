@@ -31,7 +31,6 @@ a {
   }
 
   .avatar {
-    margin-left: 5px;
     border-radius: 8px !important;
     box-shadow: 0 0 15px #ccc;
     opacity: .8;
@@ -44,53 +43,24 @@ a {
   .name {
     text-transform: uppercase;
     margin: 10px 0 20px 0;
-
-    #xliii {
-      padding-left: 1px;
-      font-size: 23px;
-      letter-spacing: 5px;
-      color: #666;
-
-      &:hover {
-        color: $black;
-      }
-    }
-
-    #waves {
-      font-size: 17px;
-      font-weight: bold;
-      letter-spacing: 1px;
-      color: $black;
-    }
-  }
-
-/*  .name {
-    text-transform: uppercase;
-    margin: 10px 0 20px 0;
     color: $black;
 
+    &:hover {
+      color: #333;
+    }
+
     #xliii {
       padding-left: 1px;
       font-size: 23px;
       letter-spacing: 5px;
-      color: $black;
-
-      &:hover {
-        color: #333;
-      }
     }
 
     #waves {
       font-size: 17px;
       font-weight: bold;
       letter-spacing: 1px;
-      color: $black;
-
-      &:hover {
-        color: #333;
-      }
     }
-  }*/
+  }
 
   img {
     /*padding: 0 3px;*/

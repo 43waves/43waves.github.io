@@ -11,38 +11,10 @@ a {
   left: 15px;
   top: 15px;
   width: 130px;
-  font-family: Helvetica, sans-serif;
-  /*  .name {
-      text-transform: uppercase;
-      margin: 10px 0 20px 0;
-      color: $black;
-  
-      #xliii {
-        padding-left: 1px;
-        font-size: 23px;
-        letter-spacing: 5px;
-        color: $black;
-  
-        &:hover {
-          color: #333;
-        }
-      }
-  
-      #waves {
-        font-size: 17px;
-        font-weight: bold;
-        letter-spacing: 1px;
-        color: $black;
-  
-        &:hover {
-          color: #333;
-        }
-      }
-    }*/ }
+  font-family: Helvetica, sans-serif; }
   .sidebar a {
     text-decoration: none; }
   .sidebar .avatar {
-    margin-left: 5px;
     border-radius: 8px !important;
     box-shadow: 0 0 15px #ccc;
     opacity: .8; }
@@ -50,19 +22,18 @@ a {
       opacity: 1; }
   .sidebar .name {
     text-transform: uppercase;
-    margin: 10px 0 20px 0; }
+    margin: 10px 0 20px 0;
+    color: black; }
+    .sidebar .name:hover {
+      color: #333; }
     .sidebar .name #xliii {
       padding-left: 1px;
       font-size: 23px;
-      letter-spacing: 5px;
-      color: #666; }
-      .sidebar .name #xliii:hover {
-        color: black; }
+      letter-spacing: 5px; }
     .sidebar .name #waves {
       font-size: 17px;
       font-weight: bold;
-      letter-spacing: 1px;
-      color: black; }
+      letter-spacing: 1px; }
   .sidebar img {
     /*padding: 0 3px;*/
     border: 0; }
