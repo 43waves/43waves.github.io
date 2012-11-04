@@ -49,6 +49,30 @@ a {
       padding-left: 1px;
       font-size: 23px;
       letter-spacing: 5px;
+      color: #666;
+
+      &:hover {
+        color: $black;
+      }
+    }
+
+    #waves {
+      font-size: 17px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      color: $black;
+    }
+  }
+
+/*  .name {
+    text-transform: uppercase;
+    margin: 10px 0 20px 0;
+    color: $black;
+
+    #xliii {
+      padding-left: 1px;
+      font-size: 23px;
+      letter-spacing: 5px;
       color: $black;
 
       &:hover {
@@ -66,7 +90,7 @@ a {
         color: #333;
       }
     }
-  }
+  }*/
 
   img {
     /*padding: 0 3px;*/
