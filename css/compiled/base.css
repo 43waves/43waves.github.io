@@ -15,7 +15,7 @@ a {
   .sidebar a {
     text-decoration: none; }
   .sidebar .avatar {
-    border-radius: 8px !important;
+    border-radius: 8px;
     box-shadow: 0 0 15px #ccc;
     opacity: .8; }
     .sidebar .avatar:hover {
