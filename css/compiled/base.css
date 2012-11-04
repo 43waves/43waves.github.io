@@ -38,7 +38,7 @@ a {
     padding-left: 2px;
     letter-spacing: 1px; }
   .sidebar .sections {
-    margin: 25px 0 0 -15px; }
+    margin-top: 25px; }
     .sidebar .sections a {
       background-color: black;
       padding: 3px 5px;
@@ -55,7 +55,7 @@ a {
       margin-bottom: 7px; }
 
 .content {
-  margin-left: 110px;
+  margin-left: 130px;
   width: 650px;
   margin-bottom: 50px; }
   .content .listing {
