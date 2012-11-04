@@ -2,47 +2,39 @@
 layout: layout
 ---
 
-<div class="content">
-  <div id="post">
-    {% include post_header.html %}
-    {{ content }}
-  </div>
+<section class="content">
+  <h1>
+    <a href="{{ page.url }}">{{ page.title }}</a>
+  </h1>
 
-  <div class="whoring">
-    <h3>Discussion, links and tweets</h3>
-    <div class="copy">
-      <a href="https://twitter.com/43waves">
-        <img src="http://gravatar.com/avatar/4090148590acdd31b5a96bb63d0c2293?s=142" height="50" width="50" />
-      </a>
+  <section class="byline">
+    {{ page.date | date: "%B %e, %Y" }}
+  </section>
 
-      <p>We craft <a
-        href="https://play.google.com/store/apps/developer?id=43waves">apps</a> and make things easier.</p>
+  {{ content }}
+</section>
 
-      {% if page.hn %}
-      <p>You can discuss, upvote, downvote and poke fun of this post over at <a
-        href="{{ page.hn }}">Hacker News</a>.</p>
-      {% endif %}
+<div class="whoring">
+  <h3>Discussion, links and tweets</h3>
+  <div class="copy">
+    <a href="https://twitter.com/43waves">
+      <img src="http://gravatar.com/avatar/4090148590acdd31b5a96bb63d0c2293?s=142" height="50" width="50" />
+    </a>
 
-      <a href="http://twitter.com/share" class="twitter-share-button"
-        data-count="none" data-via="43waves">Tweet</a>
-      <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+    <p>We craft <a
+      href="https://play.google.com/store/apps/developer?id=43waves">apps</a> and make things easier.</p>
 
-      <a href="http://twitter.com/43waves" class="twitter-follow-button"
-        data-show-count="false">Follow @43waves</a>
-      <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-    </div>
-  </div>
+    {% if page.hn %}
+    <p>You can discuss, upvote, downvote and poke fun of this post over at <a
+      href="{{ page.hn }}">Hacker News</a>.</p>
+    {% endif %}
 
-  <div id="hn">
-    <h3>Twitterize</h3>
-    <p>If you <a href="http://twitter.com/43waves">follow me on Twitter</a> you
-      will be started to discover that you have transformed into a handsome
-      loaf of bread.</p>
-  </div>
+    <a href="http://twitter.com/share" class="twitter-share-button"
+      data-count="none" data-via="43waves">Tweet</a>
+    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 
-  <div id="boastful">
-    <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via"43waves">Tweet</a>
-    <script type="text/javascript" src="http://platform.twitter.com/widget.js"></script>
-    <h3>Twitter Reactions</h3>
+    <a href="http://twitter.com/43waves" class="twitter-follow-button"
+      data-show-count="false">Follow @43waves</a>
+    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
   </div>
 </div>
