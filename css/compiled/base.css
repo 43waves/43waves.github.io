@@ -15,10 +15,8 @@ a {
   .sidebar a {
     text-decoration: none; }
   .sidebar .avatar {
-    border-radius: 8px !important;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    -webkit-box-shadow: 0 0 15px #ccc;
+    border-radius: 5px !important;
+    box-shadow: 0 0 15px #ccc;
     opacity: .8; }
     .sidebar .avatar:hover {
       opacity: 1; }
