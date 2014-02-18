@@ -8,3 +8,7 @@ Because sharing is caring. We're developers, after all.
 Cheers!
 
 43waves
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/43waves/43waves.github.io/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
