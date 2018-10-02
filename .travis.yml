@@ -1,7 +1,8 @@
 before_install:
   - gem update --system
   - gem --version
-  - npm install coffeescript
+  - npm install -g coffeescript
+  - coffee -v
 
 # script: jekyll --pygments --safe
 script: rake compile
