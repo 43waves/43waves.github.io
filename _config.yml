@@ -1,6 +1,6 @@
 markdown: rdiscount
 permalink: /posts/:title
 # auto: true
-rdiscount:
-  extensions: [smart]
+# rdiscount:
+#   extensions: [smart]
 gems: [jekyll-coffeescript]
