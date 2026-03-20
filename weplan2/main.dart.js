@@ -34026,8 +34026,6 @@ return A.f(o.gMI().l2(null),$async$Gc)
 case 12:h=d.uM=b
 h=h==null?null:h.length
 A.cl().$1("FcmService: token obtained ("+(h==null?0:h)+" chars)")
-h=$.uM
-if(h!=null)A.WQ(h,"rtdb",n)
 q=1
 s=11
 break
@@ -34039,7 +34037,8 @@ s=11
 break
 case 8:s=1
 break
-case 11:o.gMI().ga8t().xU(new A.apo(),new A.app())
+case 11:A.WQ($.uM,"rtdb",n)
+o.gMI().ga8t().xU(new A.apo(),new A.app())
 h=$.b0I()
 new A.cd(h,A.o(h).i("cd<1>")).xU(A.byj(),new A.apq())
 A.bq2()
@@ -34093,7 +34092,7 @@ j=t.N
 i=A.ak(["Content-Type","application/json"],j,j)
 n=A.v(j,j)
 J.eq(n,"deviceId",o)
-J.eq(n,"fcmToken",a)
+if(a!=null)J.eq(n,"fcmToken",a)
 J.eq(n,"transport",b)
 if(c!=null)J.eq(n,"uid",c)
 s=6
