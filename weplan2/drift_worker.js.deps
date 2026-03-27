@@ -457,8 +457,8 @@ file:///C:/Users/teryl/AppData/Local/Pub/Cache/hosted/pub.dev/web-1.1.1/lib/src/
 file:///C:/Users/teryl/AppData/Local/Pub/Cache/hosted/pub.dev/web-1.1.1/lib/web.dart
 file:///D:/source/flutter/flutter/bin/cache/dart-sdk/lib/_internal/dart2js_platform.dill
 file:///D:/source/flutter/flutter/bin/cache/dart-sdk/lib/libraries.json
-file:///D:/source/repos/weplan/.dart_tool/package_config.json
-file:///D:/source/repos/weplan/web/drift_worker.dart
+file:///D:/source/repos/weplan/.worktrees/device-revocation-cleanup/.dart_tool/package_config.json
+file:///D:/source/repos/weplan/.worktrees/device-revocation-cleanup/web/drift_worker.dart
 org-dartlang-sdk:///lib/_http/crypto.dart
 org-dartlang-sdk:///lib/_http/embedder_config.dart
 org-dartlang-sdk:///lib/_http/http.dart
