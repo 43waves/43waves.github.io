@@ -1,0 +1,11 @@
+# Agent OS Standards Index
+
+global:
+  tech-stack:
+    description: GitHub Pages static site with Jekyll, hosting privacy policies and app pages
+
+workflow:
+  git-workflow:
+    description: Worktree-based development, branch naming, cleanup after merge
+  pr-process:
+    description: PR creation, CI checks, merge, and auto-cleanup workflow
