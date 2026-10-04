@@ -177,6 +177,59 @@ a {
       text-decoration: none; }
       .content .listing a:hover {
         text-decoration: underline; }
+  .content .apps {
+    margin: 10px 0 0 0;
+    padding: 0;
+    list-style: none;
+    font-family: Helvetica, sans-serif;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    gap: 20px 16px; }
+    .content .apps li {
+      margin: 0;
+      line-height: normal; }
+    .content .apps a {
+      display: block;
+      padding: 8px;
+      border-radius: 12px;
+      text-decoration: none;
+      color: #202124; }
+      .content .apps a:hover {
+        background-color: #eeeeee; }
+    .content .apps img {
+      display: block;
+      padding: 0;
+      border: 0;
+      width: 100%; }
+    .content .apps .feature {
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      border-radius: 8px;
+      background-color: #eeeeee; }
+    .content .apps .info {
+      display: flex;
+      align-items: center;
+      margin-top: 10px; }
+    .content .apps .icon {
+      width: 40px;
+      height: 40px;
+      flex: none;
+      border-radius: 10px;
+      margin-right: 10px; }
+    .content .apps .text {
+      min-width: 0; }
+    .content .apps .title {
+      display: block;
+      font-size: 14px;
+      font-weight: bold;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+    .content .apps .developer {
+      display: block;
+      font-size: 12px;
+      color: #777777;
+      margin-top: 2px; }
   .content .meta {
     margin: 30px 0;
     padding: 10px 0;

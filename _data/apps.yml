@@ -1,0 +1,22 @@
+- name: "Keep Screen On"
+  package: com.redwolf.screenon
+- name: "Tappy"
+  package: com.redwolf.tappyapp
+- name: "Note"
+  package: com.redwolf.note
+- name: "Mute"
+  package: com.redwolf.mute
+- name: "Feed Reader"
+  package: com.redwolf.rss_feed_reader
+- name: "Autosync"
+  package: com.redwolf.autosync
+- name: "QR Scanner"
+  package: com.redwolf.qrcodescanner
+- name: "Pig Coins"
+  package: com.tlgames.pigcoins
+- name: "Travelnap"
+  package: com.redwolf.travelnap
+- name: "Ads Revenue Viewer"
+  package: com.redwolf.ads_revenue_viewer
+- name: "Bung"
+  package: com.redwolf.bung
