@@ -3,11 +3,11 @@ layout: layout
 title: "43waves"
 ---
 
-<section class="content">
+<section class="content wide">
   <ul class="apps">
     {% for app in site.data.apps %}
       <li>
-        <a href="https://play.google.com/store/apps/details?id={{ app.package }}">
+        <a href="https://play.google.com/store/apps/details?id={{ app.package }}" target="_blank" rel="noopener">
           <img class="feature" src="/images/apps/{{ app.package }}-feature.webp" alt="" loading="lazy" />
           <span class="info">
             <img class="icon" src="/images/apps/{{ app.package }}-icon.webp" alt="" loading="lazy" />
