@@ -240,14 +240,20 @@ a {
     }
   }
 
+  &.wide {
+    width: auto;
+    max-width: 1030px;
+    margin-right: 20px;
+  }
+
   .apps {
     margin: 10px 0 0 0;
     padding: 0;
     list-style: none;
     font-family: $sans;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
-    gap: 20px 16px;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 12px 20px;
 
     li {
       margin: 0;
@@ -287,10 +293,10 @@ a {
     }
 
     .icon {
-      width: 40px;
-      height: 40px;
+      width: 48px;
+      height: 48px;
       flex: none;
-      border-radius: 10px;
+      border-radius: 12px;
       margin-right: 10px;
     }
 
@@ -300,7 +306,7 @@ a {
 
     .title {
       display: block;
-      font-size: 14px;
+      font-size: 15px;
       font-weight: bold;
       white-space: nowrap;
       overflow: hidden;
@@ -309,7 +315,7 @@ a {
 
     .developer {
       display: block;
-      font-size: 12px;
+      font-size: 13px;
       color: $mid-grey;
       margin-top: 2px;
     }
