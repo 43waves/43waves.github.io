@@ -4,4 +4,20 @@ title: "43waves"
 ---
 
 <section class="content">
+  <ul class="apps">
+    {% for app in site.data.apps %}
+      <li>
+        <a href="https://play.google.com/store/apps/details?id={{ app.package }}">
+          <img class="feature" src="/images/apps/{{ app.package }}-feature.webp" alt="" loading="lazy" />
+          <span class="info">
+            <img class="icon" src="/images/apps/{{ app.package }}-icon.webp" alt="" loading="lazy" />
+            <span class="text">
+              <span class="title">{{ app.name }}</span>
+              <span class="developer">43waves</span>
+            </span>
+          </span>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
 </section>
