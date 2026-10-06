@@ -1,0 +1,66 @@
+name: Auto-merge on CI pass
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: write
+  pull-requests: write
+  checks: read
+  actions: read
+
+jobs:
+  check-and-merge:
+    name: Auto-merge if checks pass
+    # Fork PRs get a read-only token and can't be merged from here anyway.
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Wait for checks and merge
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          # The rollup includes this very job's own check run (perpetually
+          # IN_PROGRESS until the job exits), so every query excludes it by
+          # name — otherwise "all checks completed" could never become true.
+          OTHERS='.statusCheckRollup[] | select(.name != "Auto-merge if checks pass")'
+
+          for i in {1..60}; do
+            echo "Check $i/60..."
+
+            STATUS=$(gh pr view $PR_NUMBER --json statusCheckRollup -q "$OTHERS | .status" | sort | uniq)
+
+            # Any other check failed: skip merge
+            if gh pr view $PR_NUMBER --json statusCheckRollup -q "$OTHERS | select(.conclusion == \"FAILURE\") | .conclusion" | grep -q FAILURE; then
+              echo "❌ Checks failed, skipping merge"
+              exit 0
+            fi
+
+            # No other checks registered yet, or still running
+            if [ -z "$STATUS" ] || echo "$STATUS" | grep -q "PENDING\|IN_PROGRESS\|QUEUED"; then
+              echo "⏳ Checks still running..."
+              sleep 30
+              continue
+            fi
+
+            FAILED=$(gh pr view $PR_NUMBER --json statusCheckRollup -q "$OTHERS | select(.conclusion != \"SUCCESS\") | .name" | wc -l)
+            if [ "$FAILED" -gt 0 ]; then
+              echo "❌ Some checks did not succeed, skipping merge"
+              exit 0
+            fi
+
+            echo "✅ All checks passed! Merging..."
+            # Merge directly (no --auto): the repo has no branch protection, so
+            # --auto has nothing to wait on. --delete-branch explicitly because
+            # the repo setting alone has been seen to skip branches merged from
+            # a workflow run.
+            gh pr merge $PR_NUMBER --squash --delete-branch || echo "⚠️ Merge failed or already merged"
+            exit 0
+          done
+
+          echo "⏱️ Timeout waiting for checks"
+          exit 0
