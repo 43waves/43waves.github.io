@@ -4,7 +4,7 @@ com.redwolf.screenon:
   installs: 100K+
   released: '2016-08-05'
   description: Keep your screen awake with one tap. Set a timer or go forever. Stay lit.
-  feature_url: https://play-lh.googleusercontent.com/pHpvZcToWRDgY54S7D93hvvfJEkAB-65w8X2gIzDKkmBXgxalljw_-e5OuAenlpMaY8ShlhNs42aO0Ua0xoj
+  feature_url: https://play-lh.googleusercontent.com/dIVMrM3gJ6xZed2Nh9IfbXflFf7o3g97YrOfNleo2bn-07MwNAcw8JogtlS3erCwy4yt3bh9GFLHMl_Zdj8GxA
   icon_url: https://play-lh.googleusercontent.com/UK9xTPv-2AdzM-1XnE1MGXgzyhQLjTgzbV3g3cte0ipJZ0-BxyRiEN-x8UODNDzur_Y4dimw6QAR5rit1PEpTWg
 com.redwolf.tappyapp:
   installs: 10+
@@ -22,8 +22,8 @@ com.redwolf.mute:
   rating: 3.2
   installs: 10K+
   released: '2024-04-09'
-  description: Silence your phone with one tap. Auto-restore sound after meetings or focus time
-  feature_url: https://play-lh.googleusercontent.com/GivXXa2JAtOlex579RNB5Ku4t_xFei7uf7OiU9HtEYW9wVpjpiX9v3rXHogZGVh7DnXYccJzpEd3N-gC_1CQ
+  description: Silence your phone in one tap. Sound comes back on its own when time's up.
+  feature_url: https://play-lh.googleusercontent.com/O5u7HBa_m3SXvfUaeWnKhf4X5YVADNM633OFmB9RvFaHCaC_oHWjwQ353L0MXSOKEDzw6RZ6fIVYMc0PebxFOlU
   icon_url: https://play-lh.googleusercontent.com/FREQLqbZVJIF2kCmlspKFMnpxSixSK_xy7Y5DpN4n9fML0HItK_4iyB6220FNbJZIxk3-beY_jh-kK_997SMDA
 com.redwolf.rss_feed_reader:
   installs: 500+
