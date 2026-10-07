@@ -17,7 +17,7 @@ title: "43waves"
     {% for app in site.data.apps %}
       {% assign stats = site.data.play_stats[app.package] %}
       <li data-name="{{ app.name | escape }}" data-rating="{{ stats.rating }}" data-installs="{{ stats.installs }}" data-released="{{ stats.released }}">
-        <a href="https://play.google.com/store/apps/details?id={{ app.package }}" target="_blank" rel="noopener">
+        <a href="https://play.google.com/store/apps/details?id={{ app.package }}">
           <img class="feature" src="/images/apps/{{ app.package }}-feature.webp" alt="" loading="lazy" />
           <span class="info">
             <img class="icon" src="/images/apps/{{ app.package }}-icon.webp" alt="" loading="lazy" />
