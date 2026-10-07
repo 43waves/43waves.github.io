@@ -57,3 +57,74 @@ $headline: 'Yanone Kaffeesatz', $sans;
     margin: 0 0 5px 0;
   }
 }
+
+// Phones: apps as an Instagram-style feed. The header (icon, name, stats)
+// sits above a full-bleed image and the description is the caption below.
+// The -25px margins cancel the .content padding above.
+@media (max-width: 600px) {
+  .content {
+    .sorts {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      margin: 10px -25px 0 -25px;
+      padding: 0 25px 4px 25px;
+      scrollbar-width: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      button {
+        flex: none;
+      }
+    }
+
+    .apps {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 20px 0;
+      margin: 14px -25px 0 -25px;
+
+      a {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        border-radius: 0;
+
+        &:hover {
+          background-color: transparent;
+        }
+      }
+
+      .feature {
+        border-radius: 0;
+      }
+
+      .info {
+        order: -1;
+        margin: 0;
+        padding: 0 12px 10px 12px;
+      }
+
+      .icon {
+        width: 36px;
+        height: 36px;
+        border-radius: 9px;
+      }
+
+      .title {
+        font-size: 14px;
+      }
+
+      .stats {
+        font-size: 12px;
+      }
+
+      .desc {
+        display: block;
+        margin-top: 0;
+        padding: 10px 12px 0 12px;
+        font-size: 14px;
+      }
+    }
+  }
+}

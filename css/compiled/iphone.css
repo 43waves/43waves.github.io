@@ -28,3 +28,45 @@
   width: inherit; }
   .content h1 {
     margin: 0 0 5px 0; }
+
+@media (max-width: 600px) {
+  .content .sorts {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin: 10px -25px 0 -25px;
+    padding: 0 25px 4px 25px;
+    scrollbar-width: none; }
+    .content .sorts::-webkit-scrollbar {
+      display: none; }
+    .content .sorts button {
+      flex: none; }
+  .content .apps {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px 0;
+    margin: 14px -25px 0 -25px; }
+    .content .apps a {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      border-radius: 0; }
+      .content .apps a:hover {
+        background-color: transparent; }
+    .content .apps .feature {
+      border-radius: 0; }
+    .content .apps .info {
+      order: -1;
+      margin: 0;
+      padding: 0 12px 10px 12px; }
+    .content .apps .icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 9px; }
+    .content .apps .title {
+      font-size: 14px; }
+    .content .apps .stats {
+      font-size: 12px; }
+    .content .apps .desc {
+      display: block;
+      margin-top: 0;
+      padding: 10px 12px 0 12px;
+      font-size: 14px; } }

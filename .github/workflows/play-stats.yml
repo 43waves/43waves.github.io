@@ -1,0 +1,47 @@
+name: Update Play Store stats
+
+on:
+  schedule:
+    - cron: '17 3 * * *'  # daily, 03:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+jobs:
+  update:
+    name: Update Play Store stats
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Fetch listings and images
+        run: |
+          pip install google-play-scraper==1.2.7 pyyaml==6.0.2 pillow
+          python .github/scripts/fetch_play_stats.py
+
+      # always(): when some apps fail, still commit the ones that updated (the
+      # run stays red from the step above, so the failure is not hidden).
+      # Commits straight to master: a PR opened with GITHUB_TOKEN would not
+      # trigger the build/auto-merge workflows, so it would never merge.
+      - name: Commit if changed
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git add _data/play_stats.yml images/apps
+          if git diff --cached --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Update Play Store stats"
+          git push
+          # Ask Pages to rebuild in case a GITHUB_TOKEN push doesn't trigger it.
+          gh api -X POST "repos/${{ github.repository }}/pages/builds" || true
