@@ -4,6 +4,7 @@ title: "43waves"
 ---
 
 <section class="content wide">
+  <div class="sorts-sentinel" id="sorts-sentinel"></div>
   <nav class="sorts" id="sorts" aria-label="Sort apps" hidden>
     <button type="button" data-sort="featured" aria-pressed="true">Featured</button>
     <button type="button" data-sort="popular" aria-pressed="false">Popular</button>
@@ -87,6 +88,14 @@ title: "43waves"
     };
 
     var buttons = bar.querySelectorAll('button');
+    var sentinel = document.getElementById('sorts-sentinel');
+
+    // The bar is sticky; add an edge under it once it is pinned to the top.
+    if (sentinel && window.IntersectionObserver) {
+      new IntersectionObserver(function (changes) {
+        bar.classList.toggle('stuck', !changes[0].isIntersecting);
+      }).observe(sentinel);
+    }
 
     function apply(key, save) {
       if (!sorts[key]) key = 'featured';
@@ -97,6 +106,10 @@ title: "43waves"
         button.setAttribute('aria-pressed', button.getAttribute('data-sort') === key ? 'true' : 'false');
       });
       if (save) {
+        // Scrolled down: go back to the first app so the new order starts in view.
+        if (sentinel && bar.classList.contains('stuck')) {
+          window.scrollTo(0, sentinel.getBoundingClientRect().top + window.pageYOffset);
+        }
         try {
           var url = new URL(location.href);
           if (key === 'featured') url.searchParams.delete('sort');
