@@ -120,7 +120,10 @@ a {
       overflow: hidden;
       clip: rect(0 0 0 0);
       white-space: nowrap; }
-    .sidebar .nav-item:hover {
+    @media (hover: hover) {
+      .sidebar .nav-item:hover {
+        background-color: var(--surface); } }
+    .sidebar .nav-item[aria-current="page"] {
       background-color: var(--surface); }
     .sidebar .nav-item svg {
       width: 18px;
@@ -296,8 +299,9 @@ a {
       background-color: var(--bg);
       color: var(--card-text);
       cursor: pointer; }
-      .content .sorts button:hover {
-        background-color: var(--surface); }
+      @media (hover: hover) {
+        .content .sorts button:hover {
+          background-color: var(--surface); } }
       .content .sorts button[aria-pressed="true"] {
         background-color: var(--card-text);
         border-color: var(--card-text);
@@ -312,7 +316,7 @@ a {
     font-family: Helvetica, sans-serif;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 12px 20px; }
+    gap: 28px 24px; }
     @media (min-width: 1400px) {
       .content .apps {
         grid-template-columns: repeat(5, minmax(0, 1fr)); } }
@@ -321,12 +325,8 @@ a {
       line-height: normal; }
     .content .apps a {
       display: block;
-      padding: 8px;
-      border-radius: 12px;
       text-decoration: none;
       color: var(--card-text); }
-      .content .apps a:hover {
-        background-color: var(--surface); }
     .content .apps img {
       display: block;
       padding: 0;
