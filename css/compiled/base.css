@@ -64,7 +64,7 @@ a {
   position: fixed;
   left: 15px;
   top: 15px;
-  width: 128px;
+  width: 96px;
   font-family: Helvetica, sans-serif; }
   .sidebar a {
     text-decoration: none; }
@@ -98,22 +98,28 @@ a {
   .sidebar .nav {
     display: flex;
     flex-direction: column;
-    gap: 2px; }
+    align-items: center;
+    gap: 4px; }
   .sidebar .nav-item {
+    position: relative;
     display: flex;
     align-items: center;
-    gap: 8px;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 8px 10px;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    padding: 0;
     border: 0;
-    border-radius: 8px;
+    border-radius: 50%;
     background: none;
-    font: inherit;
-    font-size: 14px;
-    text-align: left;
     color: var(--card-text);
     cursor: pointer; }
+    .sidebar .nav-item .label {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap; }
     .sidebar .nav-item:hover {
       background-color: var(--surface); }
     .sidebar .nav-item svg {
@@ -144,7 +150,7 @@ a {
   display: inline; }
 
 .content {
-  margin-left: 150px;
+  margin-left: 130px;
   width: 650px;
   margin-bottom: 50px; }
   .content h1 {
@@ -329,7 +335,6 @@ a {
     .content .apps .feature {
       aspect-ratio: 1024 / 500;
       object-fit: cover;
-      border-radius: 8px;
       background-color: var(--surface); }
     .content .apps .info {
       display: flex;
