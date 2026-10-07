@@ -130,3 +130,19 @@ title: "43waves"
     bar.hidden = false;
   })();
 </script>
+
+<script>
+  // On Chrome for Android, open the Play app's full app page. A plain https link
+  // only gets Play's small install sheet. The https link stays as the fallback
+  // for when the Play app is missing, and as the link everywhere else.
+  (function () {
+    if (!/Android/.test(navigator.userAgent) || !/Chrome\//.test(navigator.userAgent)) return;
+    Array.prototype.forEach.call(document.querySelectorAll('#apps a'), function (link) {
+      var match = /[?&]id=([^&]+)/.exec(link.href);
+      if (!match) return;
+      link.href = 'intent://details?id=' + match[1] +
+        '#Intent;scheme=market;package=com.android.vending;S.browser_fallback_url=' +
+        encodeURIComponent(link.href) + ';end';
+    });
+  })();
+</script>
