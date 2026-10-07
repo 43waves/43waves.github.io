@@ -4,20 +4,113 @@ title: "43waves"
 ---
 
 <section class="content wide">
-  <ul class="apps">
+  <nav class="sorts" id="sorts" aria-label="Sort apps" hidden>
+    <button type="button" data-sort="featured" aria-pressed="true">Featured</button>
+    <button type="button" data-sort="popular" aria-pressed="false">Popular</button>
+    <button type="button" data-sort="newest" aria-pressed="false">Newest</button>
+    <button type="button" data-sort="rating" aria-pressed="false">Top rated</button>
+    <button type="button" data-sort="name" aria-pressed="false">A&ndash;Z</button>
+  </nav>
+
+  <ul class="apps" id="apps">
     {% for app in site.data.apps %}
-      <li>
+      {% assign stats = site.data.play_stats[app.package] %}
+      <li data-name="{{ app.name | escape }}" data-rating="{{ stats.rating }}" data-installs="{{ stats.installs }}" data-released="{{ stats.released }}">
         <a href="https://play.google.com/store/apps/details?id={{ app.package }}" target="_blank" rel="noopener">
           <img class="feature" src="/images/apps/{{ app.package }}-feature.webp" alt="" loading="lazy" />
           <span class="info">
             <img class="icon" src="/images/apps/{{ app.package }}-icon.webp" alt="" loading="lazy" />
             <span class="text">
               <span class="title">{{ app.name }}</span>
-              <span class="developer">43waves</span>
+              <span class="stats">{% if stats.rating %}&#9733; {{ stats.rating }} &middot; {% endif %}{{ stats.installs }}</span>
             </span>
           </span>
+          {% if stats.description %}<span class="desc">{{ stats.description | escape }}</span>{% endif %}
         </a>
       </li>
     {% endfor %}
   </ul>
 </section>
+
+<script>
+  // Runs right after the list so the default order is in place before first paint.
+  (function () {
+    var list = document.getElementById('apps');
+    var bar = document.getElementById('sorts');
+    if (!list || !bar) return;
+
+    // Apps released within this window come first under "Featured".
+    var cutoffDate = new Date();
+    cutoffDate.setMonth(cutoffDate.getMonth() - 6);
+    var cutoff = cutoffDate.toISOString().slice(0, 10);
+
+    // "100K+" -> 100000
+    function parseInstalls(text) {
+      var match = /^(\d+)([KMB]?)\+?$/.exec(text || '');
+      if (!match) return 1;
+      return Number(match[1]) * ({ K: 1e3, M: 1e6, B: 1e9 }[match[2]] || 1);
+    }
+
+    var entries = Array.prototype.map.call(list.children, function (el) {
+      var rating = parseFloat(el.getAttribute('data-rating')) || 0;
+      var installs = parseInstalls(el.getAttribute('data-installs'));
+      return {
+        el: el,
+        name: el.getAttribute('data-name'),
+        rating: rating,
+        installs: installs,
+        released: el.getAttribute('data-released') || '',
+        // Unrated apps count as 3.0 so they are not ranked below every rated app.
+        score: Math.log(Math.max(installs, 1)) / Math.LN10 * (rating || 3)
+      };
+    });
+
+    function newestFirst(a, b) {
+      return a.released < b.released ? 1 : a.released > b.released ? -1 : 0;
+    }
+
+    var sorts = {
+      featured: function (a, b) {
+        var aNew = a.released >= cutoff;
+        var bNew = b.released >= cutoff;
+        if (aNew !== bNew) return aNew ? -1 : 1;
+        if (aNew) return newestFirst(a, b);
+        return b.score - a.score || newestFirst(a, b);
+      },
+      popular: function (a, b) { return b.score - a.score || newestFirst(a, b); },
+      newest: newestFirst,
+      rating: function (a, b) { return b.rating - a.rating || b.installs - a.installs; },
+      name: function (a, b) { return a.name.localeCompare(b.name); }
+    };
+
+    var buttons = bar.querySelectorAll('button');
+
+    function apply(key, save) {
+      if (!sorts[key]) key = 'featured';
+      entries.slice().sort(sorts[key]).forEach(function (entry) {
+        list.appendChild(entry.el);
+      });
+      Array.prototype.forEach.call(buttons, function (button) {
+        button.setAttribute('aria-pressed', button.getAttribute('data-sort') === key ? 'true' : 'false');
+      });
+      if (save) {
+        try {
+          var url = new URL(location.href);
+          if (key === 'featured') url.searchParams.delete('sort');
+          else url.searchParams.set('sort', key);
+          history.replaceState(null, '', url);
+        } catch (e) {}
+      }
+    }
+
+    bar.addEventListener('click', function (event) {
+      var button = event.target.closest('button');
+      if (button) apply(button.getAttribute('data-sort'), true);
+    });
+
+    var initial = 'featured';
+    try { initial = new URLSearchParams(location.search).get('sort') || initial; } catch (e) {}
+    apply(initial, false);
+    bar.hidden = false;
+  })();
+</script>
