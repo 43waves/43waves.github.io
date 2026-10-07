@@ -22,7 +22,10 @@ title: "43waves"
             <img class="icon" src="/images/apps/{{ app.package }}-icon.webp" alt="" loading="lazy" />
             <span class="text">
               <span class="title">{{ app.name }}</span>
-              <span class="stats">{% if stats.rating %}&#9733; {{ stats.rating }} &middot; {% endif %}{{ stats.installs }}</span>
+              <span class="stats">
+                {% if stats.rating %}<span class="rating" title="Rating {{ stats.rating }}"><span class="star">&#9733;</span>{{ stats.rating }}</span>{% endif %}
+                {% if stats.installs %}<span class="installs" title="{{ stats.installs }} installs"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>{{ stats.installs }}</span>{% endif %}
+              </span>
             </span>
           </span>
           {% if stats.description %}<span class="desc">{{ stats.description | escape }}</span>{% endif %}

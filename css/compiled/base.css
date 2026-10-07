@@ -1,10 +1,64 @@
+/* Theme colours. Light is the default; dark follows the device setting unless
+   the visitor picked one with the sidebar toggle (html[data-theme]). */
+:root {
+  color-scheme: light;
+  --bg: #ffffff;
+  --text: #000000;
+  --text-soft: #444444;
+  --heading: #333333;
+  --muted: #777777;
+  --link: #227ce8;
+  --surface: #eeeeee;
+  --border: #cccccc;
+  --btn-hover: #cccccc;
+  --card-text: #202124;
+  --desc: #5f6368;
+  --chip-border: #dadce0;
+  --glow: #cccccc;
+  --star: #fbbc04; }
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #121212;
+    --text: #e8eaed;
+    --text-soft: #bdc1c6;
+    --heading: #e8eaed;
+    --muted: #9aa0a6;
+    --link: #8ab4f8;
+    --surface: #202124;
+    --border: #3c4043;
+    --btn-hover: #5f6368;
+    --card-text: #e8eaed;
+    --desc: #9aa0a6;
+    --chip-border: #3c4043;
+    --glow: #000000; } }
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #121212;
+  --text: #e8eaed;
+  --text-soft: #bdc1c6;
+  --heading: #e8eaed;
+  --muted: #9aa0a6;
+  --link: #8ab4f8;
+  --surface: #202124;
+  --border: #3c4043;
+  --btn-hover: #5f6368;
+  --card-text: #e8eaed;
+  --desc: #9aa0a6;
+  --chip-border: #3c4043;
+  --glow: #000000; }
+
 body {
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
   margin: 0;
+  background-color: var(--bg);
+  color: var(--text);
   -webkit-font-smoothing: antialiased; }
 
 a {
-  color: #227ce8; }
+  color: var(--link); }
 
 .sidebar {
   position: fixed;
@@ -19,7 +73,7 @@ a {
   .sidebar .avatar {
     padding: 0;
     border-radius: 8px;
-    box-shadow: 0 0 15px #ccc;
+    box-shadow: 0 0 15px var(--glow);
     opacity: .9; }
     .sidebar .avatar:hover {
       opacity: 1; }
@@ -30,28 +84,28 @@ a {
       padding-left: 20px;
       font-size: 23px;
       letter-spacing: 5px;
-      color: black; }
+      color: var(--text); }
     .sidebar .name #waves {
       padding-left: 5px;
       font-size: 17px;
       font-weight: bold;
       letter-spacing: 1px;
-      color: black; }
+      color: var(--text); }
   .sidebar .alt-text {
     font-size: 12px;
-    color: #777777;
+    color: var(--muted);
     padding-left: 2px;
     letter-spacing: 1px; }
   .sidebar .sections {
     margin-top: 25px; }
     .sidebar .sections a {
-      background-color: black;
+      background-color: var(--text);
       padding: 3px 5px;
-      color: #fff;
+      color: var(--bg);
       font-weight: bold;
       font-size: 12px; }
       .sidebar .sections a:hover {
-        color: #ccc; }
+        color: var(--btn-hover); }
     .sidebar .sections ul {
       margin: 0;
       padding: 0; }
@@ -59,41 +113,73 @@ a {
       list-style: none;
       margin-bottom: 7px; }
 
+.theme-toggle {
+  border: 0;
+  padding: 3px 5px;
+  background-color: var(--text);
+  color: var(--bg);
+  line-height: 0;
+  cursor: pointer; }
+  .theme-toggle:hover {
+    color: var(--btn-hover); }
+  .theme-toggle svg {
+    width: 14px;
+    height: 14px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round; }
+  .theme-toggle .sun {
+    display: none; }
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme-toggle .moon {
+    display: none; }
+  :root:not([data-theme="light"]) .theme-toggle .sun {
+    display: inline; } }
+
+:root[data-theme="dark"] .theme-toggle .moon {
+  display: none; }
+
+:root[data-theme="dark"] .theme-toggle .sun {
+  display: inline; }
+
 .content {
   margin-left: 130px;
   width: 650px;
   margin-bottom: 50px; }
   .content h1 {
-    color: #333;
+    color: var(--heading);
     font-family: "Yanone Kaffeesatz", Helvetica, sans-serif;
     font-weight: 400;
-    border-bottom: 1px solid #ccc; }
+    border-bottom: 1px solid var(--border); }
   .content h1 a {
-    color: #111;
+    color: var(--heading);
     text-decoration: none; }
   .content h2 {
-    color: #333;
+    color: var(--heading);
     font-family: "Yanone Kaffeesatz", Helvetica, sans-serif;
     font-weight: 400;
-    border-bottom: 1px solid #ccc; }
+    border-bottom: 1px solid var(--border); }
   .content h2 a {
-    color: #111;
+    color: var(--heading);
     text-decoration: none; }
   .content h3 {
-    color: #333;
+    color: var(--heading);
     font-family: "Yanone Kaffeesatz", Helvetica, sans-serif;
     font-weight: 400;
-    border-bottom: 1px solid #ccc; }
+    border-bottom: 1px solid var(--border); }
   .content h3 a {
-    color: #111;
+    color: var(--heading);
     text-decoration: none; }
   .content h4 {
-    color: #333;
+    color: var(--heading);
     font-family: "Yanone Kaffeesatz", Helvetica, sans-serif;
     font-weight: 400;
-    border-bottom: 1px solid #ccc; }
+    border-bottom: 1px solid var(--border); }
   .content h4 a {
-    color: #111;
+    color: var(--heading);
     text-decoration: none; }
   .content h1 {
     font-size: 36px;
@@ -102,7 +188,7 @@ a {
     font-size: 30px;
     margin-bottom: 15px; }
   .content h3 {
-    color: #777777;
+    color: var(--muted);
     font-size: 25px;
     padding-bottom: 5px;
     margin-bottom: 10px; }
@@ -113,13 +199,13 @@ a {
     line-height: 1.7em; }
     .content p code {
       font-size: 12px;
-      background-color: #eeeeee;
-      border: 1px solid #777777;
+      background-color: var(--surface);
+      border: 1px solid var(--muted);
       border-radius: 3px;
       padding: 2px 3px; }
   .content img {
     padding: 3px;
-    border: 1px solid #eeeeee;
+    border: 1px solid var(--surface);
     max-width: 100%; }
   .content hr {
     border: 0;
@@ -135,23 +221,23 @@ a {
     font-size: 14px;
     padding: .25em 1em;
     margin: 1em 1em 0 1em;
-    color: #444; }
+    color: var(--text-soft); }
     .content blockquote cite:before {
       content: '- '; }
     .content blockquote cite {
       display: block;
       margin-top: .5em;
       text-align: right;
-      color: #111;
+      color: var(--heading);
       font-style: normal; }
   .content .byline {
     margin-bottom: 17px;
     font-family: "Yanone Kaffeesatz", Helvetica, sans-serif;
     padding-left: 0;
     font-size: 17px;
-    color: #777777; }
+    color: var(--muted); }
   .content .aside {
-    background-color: #eeeeee;
+    background-color: var(--surface);
     padding: 14px;
     font-size: 14px;
     margin: 5px 0 15px 0;
@@ -169,8 +255,8 @@ a {
       list-style: none;
       padding: 5px 3px;
       margin: 0;
-      color: #777777;
-      border-bottom: 1px solid #eeeeee; }
+      color: var(--muted);
+      border-bottom: 1px solid var(--surface); }
     .content .listing li span {
       float: right; }
     .content .listing a {
@@ -192,17 +278,17 @@ a {
       font: inherit;
       font-size: 13px;
       padding: 6px 14px;
-      border: 1px solid #dadce0;
+      border: 1px solid var(--chip-border);
       border-radius: 16px;
-      background-color: #fff;
-      color: #202124;
+      background-color: var(--bg);
+      color: var(--card-text);
       cursor: pointer; }
       .content .sorts button:hover {
-        background-color: #eeeeee; }
+        background-color: var(--surface); }
       .content .sorts button[aria-pressed="true"] {
-        background-color: #202124;
-        border-color: #202124;
-        color: #fff; }
+        background-color: var(--card-text);
+        border-color: var(--card-text);
+        color: var(--bg); }
   .content .apps {
     margin: 10px 0 0 0;
     padding: 0;
@@ -222,9 +308,9 @@ a {
       padding: 8px;
       border-radius: 12px;
       text-decoration: none;
-      color: #202124; }
+      color: var(--card-text); }
       .content .apps a:hover {
-        background-color: #eeeeee; }
+        background-color: var(--surface); }
     .content .apps img {
       display: block;
       padding: 0;
@@ -234,7 +320,7 @@ a {
       aspect-ratio: 1024 / 500;
       object-fit: cover;
       border-radius: 8px;
-      background-color: #eeeeee; }
+      background-color: var(--surface); }
     .content .apps .info {
       display: flex;
       align-items: center;
@@ -255,10 +341,26 @@ a {
       overflow: hidden;
       text-overflow: ellipsis; }
     .content .apps .stats {
-      display: block;
+      display: flex;
+      align-items: center;
+      gap: 10px;
       font-size: 13px;
-      color: #777777;
+      color: var(--muted);
       margin-top: 2px; }
+      .content .apps .stats > span {
+        display: inline-flex;
+        align-items: center;
+        gap: 3px; }
+      .content .apps .stats svg {
+        width: 13px;
+        height: 13px;
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round; }
+      .content .apps .stats .star {
+        color: var(--star); }
     .content .apps .desc {
       display: -webkit-box;
       -webkit-line-clamp: 2;
@@ -267,7 +369,7 @@ a {
       margin-top: 8px;
       font-size: 13px;
       line-height: 1.4;
-      color: #5f6368; }
+      color: var(--desc); }
   .content .meta {
     margin: 30px 0;
     padding: 10px 0;
