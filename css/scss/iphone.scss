@@ -96,12 +96,6 @@ $headline: 'Yanone Kaffeesatz', $sans;
       a {
         display: grid;
         grid-template-columns: 12px 36px 10px minmax(0, 1fr) 12px;
-        padding: 0;
-        border-radius: 0;
-
-        &:hover {
-          background-color: transparent;
-        }
       }
 
       .info,
