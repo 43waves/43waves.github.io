@@ -6,18 +6,18 @@ $headline: 'Yanone Kaffeesatz', $sans;
 // the visitor picked one with the sidebar toggle (html[data-theme]).
 @mixin dark-theme {
   color-scheme: dark;
-  --bg: #121212;
-  --text: #e8eaed;
-  --text-soft: #bdc1c6;
-  --heading: #e8eaed;
+  --bg: #1e1f22;
+  --text: #d6d8db;
+  --text-soft: #b3b6bb;
+  --heading: #d6d8db;
   --muted: #9aa0a6;
   --link: #8ab4f8;
-  --surface: #202124;
-  --border: #3c4043;
+  --surface: #2a2b2f;
+  --border: #43464b;
   --btn-hover: #5f6368;
-  --card-text: #e8eaed;
+  --card-text: #d6d8db;
   --desc: #9aa0a6;
-  --chip-border: #3c4043;
+  --chip-border: #43464b;
   --glow: transparent;
 }
 
@@ -85,21 +85,13 @@ a {
     color: var(--text);
   }
 
-  .avatar {
-    display: block;
-    margin: 0 auto;
-    padding: 0;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px var(--glow);
-  }
-
   .name {
     display: block;
-    margin: 10px 0 18px 0;
+    margin: 0 0 18px 0;
     text-transform: uppercase;
 
     // The left padding balances the trailing letter-spacing so the text
-    // looks centred under the logo.
+    // looks centred.
     #xliii {
       display: block;
       padding-left: 5px;
@@ -396,6 +388,12 @@ a {
     }
   }
 
+  .about {
+    h1 {
+      border-bottom: none;
+    }
+  }
+
   .about-actions {
     margin-top: -0.4em;
   }
@@ -407,8 +405,8 @@ a {
     border-radius: 20px;
     background-color: var(--card-text);
     color: var(--bg);
-    font-family: $sans;
-    font-size: 14px;
+    font-family: $headline;
+    font-size: 18px;
     line-height: 1.2;
     text-decoration: none;
 
