@@ -47,36 +47,29 @@
 
 <body>
   <section class="sidebar">
-    <a href="/">
-      <img src="/43waves-icon.png" height="75" width="75" class="avatar" />
+    <a href="/" class="brand">
+      <img src="/43waves-icon.png" height="75" width="75" class="avatar" alt="" />
+      <span class="name">
+        <span id="xliii">43</span>
+        <span id="waves">waves</span>
+      </span>
     </a>
 
-    <section class="name">
-      <a href="/">
-        <span id="xliii">43</span><br />
-        <span id="waves">waves</span>
+    <nav class="nav" aria-label="Main">
+      <a href="https://play.google.com/store/apps/developer?id=43waves" class="nav-item" id="play" title="Get 43waves Android apps">
+        <svg class="play-logo" viewBox="0 0 24 24" aria-hidden="true"><path fill="#00a0ff" d="M3.6 1.9c-.4.2-.6.7-.6 1.3v17.6c0 .6.2 1.1.6 1.3L13.4 12z"/><path fill="#00d95f" d="M17 8.4 13.4 12 3.6 1.9c.4-.2 1-.2 1.5.1z"/><path fill="#ff3a44" d="M17 15.6 13.4 12 3.6 22.1c.4.2 1 .2 1.5-.1z"/><path fill="#ffc400" d="M20.5 10.4 17 8.4 13.4 12 17 15.6l3.5-2c.7-.4.7-2.8 0-3.2z"/></svg>
+        <span class="label">Google Play</span>
       </a>
-    </section>
-
-    <section class="alt-text">&nbsp;</section>
-
-    <section class="meta">
-      <a href="https://play.google.com/store/apps/developer?id=43waves" id="play">
-        <img src="/images/play.png" alt="play" title="Get 43waves Android apps" height="16" width="16" />
+      <a href="/about" class="nav-item">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+        <span class="label">About</span>
       </a>
-    </section>
-
-    <section class="sections">
-      <ul>
-        <li><a href="/about">about</a></li>
-        <li>
-          <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch to dark theme" title="Switch to dark theme">
-            <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-            <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-          </button>
-        </li>
-      </ul>
-    </section>
+      <button type="button" class="nav-item theme-toggle" id="theme-toggle" title="Switch to dark theme">
+        <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <span class="label">Dark mode</span>
+      </button>
+    </nav>
   </section>
 
   {{ content }}
@@ -94,10 +87,11 @@
         return window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
       }
 
+      // The button names what it switches to.
       function label() {
-        var text = 'Switch to ' + (current() === 'dark' ? 'light' : 'dark') + ' theme';
-        button.setAttribute('aria-label', text);
-        button.setAttribute('title', text);
+        var next = current() === 'dark' ? 'light' : 'dark';
+        button.querySelector('.label').textContent = next === 'dark' ? 'Dark mode' : 'Light mode';
+        button.setAttribute('title', 'Switch to ' + next + ' theme');
       }
 
       button.addEventListener('click', function () {
