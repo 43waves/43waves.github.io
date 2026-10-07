@@ -54,11 +54,7 @@
     margin: 14px -25px 0 -25px; }
     .content .apps a {
       display: grid;
-      grid-template-columns: 12px 36px 10px minmax(0, 1fr) 12px;
-      padding: 0;
-      border-radius: 0; }
-      .content .apps a:hover {
-        background-color: transparent; }
+      grid-template-columns: 12px 36px 10px minmax(0, 1fr) 12px; }
     .content .apps .info,
     .content .apps .text {
       display: contents; }
