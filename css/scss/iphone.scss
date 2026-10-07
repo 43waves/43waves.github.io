@@ -45,6 +45,10 @@ $headline: 'Yanone Kaffeesatz', $sans;
       margin: 0 20px 0 0;
       padding: 5px 10px;
     }
+
+    .theme-toggle {
+      padding: 5px 10px;
+    }
   }
 }
 
@@ -56,11 +60,16 @@ $headline: 'Yanone Kaffeesatz', $sans;
   h1 {
     margin: 0 0 5px 0;
   }
+
+  // .wide keeps a 20px right margin on desktop; drop it so the padding is even.
+  &.wide {
+    margin-right: 0;
+  }
 }
 
-// Phones: apps as an Instagram-style feed. The header (icon, name, stats)
-// sits above a full-bleed image and the description is the caption below.
-// The -25px margins cancel the .content padding above.
+// Phones: apps as an Instagram-style feed. Header (icon + name), a full-bleed
+// image, the stats row, then the description as the caption. The -25px margins
+// cancel the .content padding above.
 @media (max-width: 600px) {
   .content {
     .sorts {
@@ -84,9 +93,11 @@ $headline: 'Yanone Kaffeesatz', $sans;
       gap: 20px 0;
       margin: 14px -25px 0 -25px;
 
+      // .info and .text are flattened so the icon, title, image, stats and
+      // description are all grid items of the link and can be placed in order.
       a {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: 12px 36px 10px minmax(0, 1fr) 12px;
         padding: 0;
         border-radius: 0;
 
@@ -95,35 +106,57 @@ $headline: 'Yanone Kaffeesatz', $sans;
         }
       }
 
-      .feature {
-        border-radius: 0;
-      }
-
-      .info {
-        order: -1;
-        margin: 0;
-        padding: 0 12px 10px 12px;
+      .info,
+      .text {
+        display: contents;
       }
 
       .icon {
+        grid-area: 1 / 2;
         width: 36px;
         height: 36px;
+        margin: 0 0 10px 0;
         border-radius: 9px;
       }
 
       .title {
+        grid-area: 1 / 4;
+        align-self: center;
+        margin-bottom: 10px;
         font-size: 14px;
       }
 
+      .feature {
+        grid-area: 2 / 1 / 3 / -1;
+        border-radius: 0;
+      }
+
       .stats {
-        font-size: 12px;
+        grid-area: 3 / 2 / 4 / 5;
+        gap: 16px;
+        margin-top: 0;
+        padding-top: 10px;
+        font-size: 14px;
+        font-weight: bold;
+        color: var(--card-text);
+
+        > span {
+          gap: 5px;
+        }
+
+        svg {
+          width: 18px;
+          height: 18px;
+        }
       }
 
       .desc {
         display: block;
+        grid-area: 4 / 2 / 5 / 5;
         margin-top: 0;
-        padding: 10px 12px 0 12px;
+        padding-top: 6px;
         font-size: 14px;
+        color: var(--card-text);
       }
     }
   }
