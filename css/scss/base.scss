@@ -396,6 +396,30 @@ a {
     }
   }
 
+  .about-actions {
+    margin-top: -0.4em;
+  }
+
+  .about-button {
+    display: inline-block;
+    padding: 9px 20px;
+    border: 1px solid var(--card-text);
+    border-radius: 20px;
+    background-color: var(--card-text);
+    color: var(--bg);
+    font-family: $sans;
+    font-size: 14px;
+    line-height: 1.2;
+    text-decoration: none;
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: var(--bg);
+        color: var(--card-text);
+      }
+    }
+  }
+
   .sorts-sentinel {
     height: 1px;
     margin-bottom: -1px;

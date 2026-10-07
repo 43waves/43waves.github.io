@@ -306,6 +306,23 @@ a {
         background-color: var(--card-text);
         border-color: var(--card-text);
         color: var(--bg); }
+  .content .about-actions {
+    margin-top: -0.4em; }
+  .content .about-button {
+    display: inline-block;
+    padding: 9px 20px;
+    border: 1px solid var(--card-text);
+    border-radius: 20px;
+    background-color: var(--card-text);
+    color: var(--bg);
+    font-family: Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 1.2;
+    text-decoration: none; }
+    @media (hover: hover) {
+      .content .about-button:hover {
+        background-color: var(--bg);
+        color: var(--card-text); } }
   .content .sorts-sentinel {
     height: 1px;
     margin-bottom: -1px; }
