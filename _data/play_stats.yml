@@ -53,8 +53,8 @@ com.tlgames.pigcoins:
 com.redwolf.travelnap:
   installs: 100+
   released: '2026-08-18'
-  description: Nap on the bus or train. A location alarm wakes you before your stop.
-  feature_url: https://play-lh.googleusercontent.com/kTWk6XBd_OJWSyRqnIfsiQR6CRcUi1bOT69pQ5HOlZFAoLvYaj5VaWk4v7MCTlUib1D6B-ixEF2JX7UflL-mKw
+  description: Nap on your commute. A location alarm wakes you up just before your stop.
+  feature_url: https://play-lh.googleusercontent.com/jzIjm25gBKB_Nl9FCH54l-rUoUuDqwt1DFtbDQAW7dcgoU-iMYgef7Wabls4D2berr1Fe3JqHYvYAEyY9t59hw
   icon_url: https://play-lh.googleusercontent.com/SDOnJKzZRtW_5FivScDdLUcrw70x8qrUBNuSB3SLj0-Bo-H9T-NRFix3JuOFSn_vSKELegGqkPQFZBwDhB8DFg
 com.redwolf.ads_revenue_viewer:
   installs: 100+
