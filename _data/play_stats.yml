@@ -7,10 +7,10 @@ com.redwolf.screenon:
   feature_url: https://play-lh.googleusercontent.com/dIVMrM3gJ6xZed2Nh9IfbXflFf7o3g97YrOfNleo2bn-07MwNAcw8JogtlS3erCwy4yt3bh9GFLHMl_Zdj8GxA
   icon_url: https://play-lh.googleusercontent.com/UK9xTPv-2AdzM-1XnE1MGXgzyhQLjTgzbV3g3cte0ipJZ0-BxyRiEN-x8UODNDzur_Y4dimw6QAR5rit1PEpTWg
 com.redwolf.tappyapp:
-  installs: 10+
+  installs: 50+
   released: '2026-07-01'
-  description: A simple tap counter with a big display, haptics, and custom tap sounds
-  feature_url: https://play-lh.googleusercontent.com/ZgdXnEAC7ItLWc9N0o3Caa8MFejMVA8zuKaAwKspKAJVuZ8fG79rPWxBWClI5138WbbxD7vZTwXMs13-x8aLhg
+  description: Count anything with one tap. Big numbers, undo, vibration and custom sounds.
+  feature_url: https://play-lh.googleusercontent.com/2qhMpivQeTwxq6c9p293Y06qSFZPCjfag0uC7fnBl5uYaDl2rbE7Egk-9ZHrkzF1CCYK69pwF0aaOikeqVg5Aw
   icon_url: https://play-lh.googleusercontent.com/jBz0uM3CRtmE-dL4LmVHgLPlRpYiB1zUSZfJWCTc0pwtCN8xnBiNXUSal_hDLBSuY_gdDxUOhrgiuqj1qjVFTw
 com.redwolf.note:
   installs: 100+
