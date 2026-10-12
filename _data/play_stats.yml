@@ -41,8 +41,8 @@ com.redwolf.autosync:
 com.redwolf.qrcodescanner:
   installs: 1K+
   released: '2021-06-05'
-  description: Fast QR & barcode scanner with history, flashlight, and zoom. Privacy-focused.
-  feature_url: https://play-lh.googleusercontent.com/7K5lWP3cKBWF7fctBJsC91wB8J01em61-94ptPtS--i5uSUrFHU-r_JM6ibfp7IZ3Xr-C4NnYj-JvxZWXI_S
+  description: Scan any QR code or barcode in a snap. Open links, join Wi-Fi, save contacts.
+  feature_url: https://play-lh.googleusercontent.com/Krozuao3tpFMM9T6T7nYJnSGn_rXv2Q8asscvMEdkUk5oboSjlfWqqGE2WjZVLWhlp-bGlslWuK8Gl_iydKCaQ
   icon_url: https://play-lh.googleusercontent.com/L7mRrRMP6Kssx7eiCW3NwGrXmn8Jts8qdcsgbu29CHZ12c-Sk2WiEuYjFvH9XThi2j-kswKm2h1cgoxwYqKDMNU
 com.tlgames.pigcoins:
   installs: 100+
