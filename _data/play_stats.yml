@@ -28,8 +28,8 @@ com.redwolf.mute:
 com.redwolf.rss_feed_reader:
   installs: 500+
   released: '2022-12-15'
-  description: A clean, fast RSS & Atom feed reader with backup, OPML import & dark mode.
-  feature_url: https://play-lh.googleusercontent.com/vICYmR1ipacAhVjADfmJHBna4x5VzMkeaBluu4DtkwUSnZ8At0ExtCeZVY03K34mA0SeObVPoh0PQd5Ag7nCmQY
+  description: Your favourite sites in one simple feed. RSS & Atom, no login, no feed limit.
+  feature_url: https://play-lh.googleusercontent.com/jU5B_TWZbgzjy1uOQnYVnJhmUOW-gEVluP8VjTqD97H4H4mpuMxgQH7PMUJeaj1NhQjNC4kH_yKFlg0cDTkX
   icon_url: https://play-lh.googleusercontent.com/ZyaMZRoAzgo3dCyl-bXVW8N170HJFHT91yaLAsPOlIjb-CdIDWPAlcgdEAYLsaRw522TimA7jAWM4yTayc8VNA
 com.redwolf.autosync:
   rating: 4.2
