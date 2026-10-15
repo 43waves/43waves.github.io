@@ -1,0 +1,15 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.redwolf.weshare",
+      "sha256_cert_fingerprints": [
+        "3D:BE:21:C0:28:9E:60:A9:71:B5:EF:47:F9:E8:E1:3B:67:68:9E:DD:F7:80:82:DB:40:96:D0:25:4E:44:D9:E3",
+        "A0:25:64:F9:31:1B:1A:6B:EE:F2:D5:33:54:E4:19:C6:21:69:BE:5E:B9:8A:04:09:D7:3D:30:D6:18:3D:BC:62",
+        "1C:FC:2B:BF:25:C7:4A:F2:3B:FD:E8:D4:4D:53:73:4C:4D:8D:D4:0D:B0:0A:CD:AE:A1:F3:5B:4E:28:12:F9:E0",
+        "A2:AE:34:BD:95:18:3B:45:CD:D1:32:86:76:85:AE:61:64:35:BC:0B:01:C6:49:77:83:2E:42:56:10:F6:A9:43"
+      ]
+    }
+  }
+]
