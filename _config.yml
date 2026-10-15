@@ -1,3 +1,6 @@
 markdown: rdiscount
 permalink: /posts/:title
 gems: [jekyll-coffeescript]
+# Jekyll skips folders that start with a dot; Android reads /.well-known/assetlinks.json
+# to let Weshare open its invite links (weshare/join).
+include: [".well-known"]
