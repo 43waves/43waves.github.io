@@ -15,8 +15,8 @@ com.redwolf.tappyapp:
 com.redwolf.note:
   installs: 100+
   released: '2026-02-25'
-  description: Simple note-taking with pin, search, backup, dark mode.
-  feature_url: https://play-lh.googleusercontent.com/qAnaQuMY7EpBYWQ1zOImi83mTC5L_HsOLv2zuCe7M9q-Fx64_6_C0cc3d8msWnO3L9xNfL-jcHIKr3LwDa3zfw
+  description: Fast, private notes with pin, search and auto backup.
+  feature_url: https://play-lh.googleusercontent.com/OkmCAyhJ0u1mqR6RB5i46jfw9OIzpGLZnO2rpa9bjf6wh3AEJEazviKM8LE2cIjp--UlFUdrgh2QIaatfc73Zw
   icon_url: https://play-lh.googleusercontent.com/y6teRB9nGSTJBxH5-GGWhmrysaWGp4NGwpprJfwLIvYhkFvgdl2jqMYtmZBwKahu2xu67MRj8-VL-4W5hH5x
 com.redwolf.mute:
   rating: 3.2
