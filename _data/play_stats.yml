@@ -47,8 +47,8 @@ com.redwolf.qrcodescanner:
 com.tlgames.pigcoins:
   installs: 100+
   released: '2019-05-03'
-  description: Dodge obstacles, collect coins, and survive as long as you can!
-  feature_url: https://play-lh.googleusercontent.com/sBe-1J_Ks5P9dBIxMN4Fv4QvMlcu7Q7DA1kTFC0-VCIJ9ecc08M4rcajJ2GQEPL3P5l4kQiXyNttq7xsQlSWbA
+  description: Grab coins, stay alive. How long can you last?
+  feature_url: https://play-lh.googleusercontent.com/xae-bS_-ZzO1nnovtdt52DoHcUVGx_iiLK3JYd-bZBSQGKeuChfGJIXYkmvkXvto9GvcMdPHDvaTToSqVv44
   icon_url: https://play-lh.googleusercontent.com/YYo8ZdqcgGFI16cTHQ0fjQFm40-EJe1Tz46LBXoX2RGpnXefekBFH7HeLbmzwmcnng-kY-Vc_FuMgq3O9W1O7WI
 com.redwolf.travelnap:
   installs: 100+
