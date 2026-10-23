@@ -68,3 +68,9 @@ com.redwolf.bung:
   description: Pong with a little TWIST.
   feature_url: https://play-lh.googleusercontent.com/-eabS2ITsNdiriUbGazW9ZQPakTHUGoduQSOAoVRHRLOV2GXt3ZO5H61EtmaLcRue0xDENiPd2YZ1aXoPz_JLQ4
   icon_url: https://play-lh.googleusercontent.com/zsRtAX6AGFciB-F99cDmz5I7-jNqw_2g84gZAI1QLPx0m46z3FCjr4EnJxjm-KI6CHm3bRZcSBhBUf4JXQfRhg
+com.redwolf.weshare:
+  installs: 1+
+  released: '2026-10-21'
+  description: Find friends and family on a live map and see when everyone will arrive.
+  feature_url: https://play-lh.googleusercontent.com/RsqsOSCnulI5VK_Izf4dPlijKkZFKNdfJTAo-YM2W4ALdCuXFGD0AXwgGB-rL8GRCg_TatIhVpqA1ZRuLCt8Rv4
+  icon_url: https://play-lh.googleusercontent.com/FPHCFpJwrcDPObky05Jn943gBkO0uJTZRXYsgNN9GriuP5GDqz73AklPrXLH6hcM4DT5hVbkXt04zz6dEqKV
