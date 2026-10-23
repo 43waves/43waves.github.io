@@ -20,3 +20,5 @@
   package: com.redwolf.ads_revenue_viewer
 - name: "Bung"
   package: com.redwolf.bung
+- name: "Weshare"
+  package: com.redwolf.weshare
