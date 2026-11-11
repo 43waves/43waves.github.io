@@ -6,26 +6,26 @@ title: "Weshare - Privacy Policy"
 <div class="content">
   <div id="post">
     <h1>Weshare Privacy Policy</h1>
-    <p><em>Last updated: October 15, 2026</em></p>
+    <p><em>Last updated: November 12, 2026</em></p>
 
     <h2>Overview</h2>
     <p>Weshare ("the App") lets you share your live location on a map with the people you invite, developed by 43waves. We are committed to protecting your privacy. This policy explains what the App stores, who can see it, and how to delete it.</p>
 
     <h2>Your Account</h2>
-    <p>The App has no sign-up screen. When you first open it, it creates an anonymous account with Google Firebase Authentication. We never ask for your name, email address or phone number to create it.</p>
+    <p>The App has no sign-up screen. When you first open it, it creates an anonymous account with Google Firebase. We never ask for your name, email address or phone number to create it.</p>
 
     <h2>Data Collection</h2>
     <h3>What Is Stored on Our Server</h3>
-    <p>To share your location with other people, the App stores the following in a Google Firebase Realtime Database (hosted by Google in the United States):</p>
+    <p>To share your location with other people, the App stores the following with Google Firebase, on Google's servers in the United States:</p>
     <ul>
       <li><strong>Display name</strong> - The name you choose, so the people you share with know who you are</li>
-      <li><strong>Profile photo</strong> (optional) - A small copy (at most 160 x 160 pixels) of a photo you choose</li>
+      <li><strong>Profile photo</strong> (optional) - A small copy of a photo you choose</li>
       <li><strong>Live location</strong> - While you are sharing: your latest position, its accuracy, your speed and the time it was taken. Only the latest position is kept; there is no location history</li>
       <li><strong>Meeting point</strong> (optional) - The name and position of a meeting point you set</li>
       <li><strong>Saved places</strong> - Your 20 latest meeting points, backed up so a reinstall brings them back</li>
       <li><strong>People you share with</strong> - Links between your anonymous account and the accounts of the people you've connected with, and which of them you share your location with</li>
       <li><strong>Invite codes</strong> - A code you create to invite people, which expires after 24 hours. Anyone who has your invite link can use it until then, so send it only to people you want to connect with. Using a code connects two people but shares no location by itself: each of you chooses who can see you</li>
-      <li><strong>Recovery record</strong> - A one-way hash of your phone's Android device identifier, so reinstalling the App on the same phone brings your account back. The identifier itself is never stored or uploaded</li>
+      <li><strong>Recovery record</strong> - A scrambled code made from your phone's ID, so reinstalling the App on the same phone brings your account back. The code can't be turned back into the ID, and the ID itself is never stored or uploaded</li>
     </ul>
 
     <h3>What We Don't Collect</h3>
@@ -52,7 +52,7 @@ title: "Weshare - Privacy Policy"
       <li><strong>Your name, photo and meeting point</strong> - Only people you have connected with through an invite</li>
       <li><strong>Your saved places and recovery record</strong> - Only you; no other user can see them</li>
     </ul>
-    <p>Access is enforced by the database's security rules. We don't look at your data except when needed to keep the service running or to answer a request from you.</p>
+    <p>We don't look at your data except when needed to keep the service running or to answer a request from you.</p>
 
     <h2>Location</h2>
     <p>Location is the App's core feature. The App reads your device's location to show you on the map and, while you are sharing, to send your latest position to the people you share with. While you are sharing, the App keeps updating your location in the background - including with the screen off or the App closed - and always shows a notification while it does. Sharing stops when you turn it off.</p>
@@ -61,13 +61,13 @@ title: "Weshare - Privacy Policy"
     <h2>Map and Place Search</h2>
     <p>The App uses OpenStreetMap services to show the map and find places:</p>
     <ul>
-      <li><strong>Map tiles</strong> - Map images are loaded from OpenStreetMap tile servers, which receive your IP address and the map area you're viewing</li>
-      <li><strong>Place search</strong> - When you search for a meeting point, your search text, along with a broad area around your location (to rank nearby places higher), is sent to the OpenStreetMap Nominatim service. Your exact coordinates are not sent</li>
+      <li><strong>Map</strong> - Map images are loaded from OpenStreetMap, which receives your IP address and the map area you're viewing</li>
+      <li><strong>Place search</strong> - When you search for a meeting point, your search text, along with a broad area around your location (to rank nearby places higher), is sent to OpenStreetMap's place search. Your exact coordinates are not sent</li>
     </ul>
     <p>These requests are handled by the OpenStreetMap Foundation as described in its <a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy" target="_blank">Privacy Policy</a>.</p>
 
     <h2>Advertising</h2>
-    <p>The App displays app-open advertisements powered by Google AdMob. The App sends no personal data with its ad requests, but when ads are shown, Google may collect certain information as described in <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>. This may include:</p>
+    <p>The App displays advertisements powered by Google AdMob. The App sends no personal data with its ad requests, but when ads are shown, Google may collect certain information as described in <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>. This may include:</p>
     <ul>
       <li>Device identifiers, such as the advertising ID</li>
       <li>IP address</li>
@@ -87,9 +87,7 @@ title: "Weshare - Privacy Policy"
 
     <h2>Permissions</h2>
     <h3>Location</h3>
-    <p>Used to show where you are on the map and, while you are sharing, to send your position to the people you share with. See the Location section above.</p>
-    <h3>Foreground Service</h3>
-    <p>Used to keep sharing your location while the screen is off or the App is in the background, with a visible notification.</p>
+    <p>Used to show where you are on the map and, while you are sharing, to send your position to the people you share with - including with the screen off or the App closed, with a visible notification. See the Location section above.</p>
     <h3>Notifications</h3>
     <p>Used to show the ongoing sharing notification and to tell you when someone arrives at your meeting point.</p>
     <h3>Internet Access</h3>
@@ -99,7 +97,7 @@ title: "Weshare - Privacy Policy"
     <h3>Sharing Invites</h3>
     <p>Invites are sent through your device's share sheet, using an app you choose. The App only shares the invite message; it does not read your contacts or messages.</p>
     <h3>Invite Links</h3>
-    <p>The invite message contains a link to a page on this site (43waves.github.io/weshare/join). The invite code is in the part of the link after the # sign, which your browser never sends to us. The page loads nothing from other sites and keeps no record of visitors. If Weshare is installed, the link opens it and joins the invite. If it isn't, the page sends you to Google Play with the invite code attached to the address, and after you install, Weshare reads it once (using Google Play's install referrer) to join the invite. Nothing else is read from Google Play.</p>
+    <p>The invite message contains a link to a page on this site (43waves.github.io/weshare/join). The invite code in the link is never sent to us, and the page loads nothing from other sites and keeps no record of visitors. If Weshare is installed, the link opens it and joins the invite. If it isn't, the page takes you to Google Play with the invite code, and once you install Weshare it picks up the code from Google Play to join the invite. Nothing else is read from Google Play.</p>
 
     <h2>Children's Privacy</h2>
     <p>The App is not directed at children under 13 and does not knowingly collect personal information from them. The advertising shown is handled by Google AdMob, which has its own policies regarding personalized advertising.</p>
